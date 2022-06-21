@@ -71,7 +71,7 @@ git clone https://github.com/ppz-pro/vsc-plugin-startup.git
 
 如果说 vscode 插件开发比某一种程序开发难，那是因为你在它上面才花了 1 分钟。相比于动辄几个月的技术培训，这 1 分钟实在是太微乎其微了。如果你也感兴趣，可以直接看 [vscode 的官方教程](https://code.visualstudio.com/api/get-started/your-first-extension)，很全面，也很细。
 
-> 当然，在这忙忙碌碌、翻翻乱乱的生活中，能静下心来学习，已实属不易，共勉！
+当然，在这忙忙碌碌、繁繁乱乱的生活中，能静下心来学习，已实属不易，共勉吧！
 
 最后的最后，自荐我在 2022 年上海疫情封控期间写的插件 —— [PPZ](https://marketplace.visualstudio.com/items?itemName=ppz.ppz)，它提供了操作数据库的图形界面，目前功能还很简单，后续功能会慢慢丰富起来。  
 [PPZ 的 github 链接](https://github.com/ppz-pro/ppz.vscode)、[PPZ 的 gitee 链接](https://gitee.com/ppz-pro/ppz.vscode)
