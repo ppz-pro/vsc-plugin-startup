@@ -1,14 +1,14 @@
 # vscode 插件开发极简教程
 首先，vscode 的插件开发很简单。如果读完这篇需要 5 分钟，那么至少有 4 分钟是花在看我写的废话上，实际上只用 1 分钟就能入门。好想把标题改成“1 分钟入门 vscode 插件开发”！
 
-写个网页现在还得用 vue 或 react，免不了搭建个环境，还得构建项目、打包……而开发 vscode 插件，你只需要[安装一个 vscode](https://code.visualstudio.com/)，其他什么都不要。
+写个网页现在还得用 vue 或 react，免不了搭建个环境，还得构建项目、打包……而开发 vscode 插件，你只需要[安装一个 vscode](https://code.visualstudio.com/)，其他什么都不要（不要用太老版本的 vscode）。
 
 下面是一个极简的 vscode 插件，代码只有四行。功能是：在 vscode 启动后，弹出一个通知：
 ![mini-vsc-plugin](https://files20220620.oss-cn-shanghai.aliyuncs.com/mini_vsc_plugin.png)
 
 （从现在开始计时，不过分吧……）
 
-你只需要新建一个文件夹，然后用 vscode 打开这个文件夹，再创建以下三个文件：
+你只需要新建一个文件夹，然后用 vscode 打开这个文件夹，再创建以下两个文件：
 ## 一、package.json
 package.json 是描述项目的文件，存放基本信息（项目名、版本、环境等）
 ``` json
@@ -41,25 +41,11 @@ exports.activate = function() {
 
 第 2 到 4 行代码，定义了“启动插件的函数”，即通过这个函数，让插件跑起来。函数体部分只有一行，通过调用 vscode 提供的 api，展示一个通知：```hello, ppz```。
 
-## 三、.vscode/lauch.json
-这个文件不是必要的，仅用来测试。有了它，**按键盘上的 f5，即可运行插件**（开启一个新的 vscode 窗口，新窗口里自动运行插件）。
-
-发布时，这文件应剔除出去。它的内容不重要，也没有理解的必要，只是一小堆繁琐的配置而已：
-``` json
-{
-	"version": "0.2.0",
-	"configurations": [
-		{
-			"name": "Run Extension",
-			"type": "extensionHost",
-			"request": "launch",
-			"args": [
-				"--extensionDevelopmentPath=${workspaceFolder}"
-			]
-		}
-	]
-}
-```
+## 运行
+至此，插件已经完成，运行一下试试：
++ 用鼠标点一下 ```ext.js``` 文件
++ 按键盘上的 f5
++ 点击弹出窗口中的 ```VS Code Extension Development```
 
 （你已经入门 vscode 插件开发，计时结束）
 
